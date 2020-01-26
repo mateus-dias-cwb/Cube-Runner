@@ -2,11 +2,12 @@
 
 public class FollowPlayer : MonoBehaviour
 {
-    public Transform player;
-    public Vector3 offset;
+  public Transform player;
+  public Vector3 offset;
 
-    void Update()
-    {
-        transform.position = player.position + offset;
-    }
+  void Update()
+  {
+    transform.position = player.position + offset;
+    // FindObjectOfType<Player>();
+  }
 }
