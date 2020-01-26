@@ -5,6 +5,17 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
   bool gameHasEnded = false;
+  public GameObject completeLevelPanel;
+  public Animator score;
+
+  public void CompleteLevel()
+  {
+    completeLevelPanel.SetActive(true);
+    score.enabled = true;
+    FindObjectOfType<PlayerMovement>().enabled = false;
+    FindObjectOfType<Score>().enabled = false;
+  }
+
   public void Endgame()
   {
     if (!gameHasEnded)
